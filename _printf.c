@@ -12,28 +12,32 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; i < format; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
-			_print_percent(format[i]);
+			_putchar('%');
+			sum++;
 			i = i + 2;
-			sum += va_arg(args, char);
 		}
 
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			_print_c(format[i + 1];
-			sum += va_arg(args, char);
+			sum += _print_c(va_arg(args, int));
+			i = i + 2;
 		}
 
 		if (format[i] == '%' && format[i + 1] == 's')
 		{
-			_print_s(format[i + 1]);
-			sum += va_arg(args, char *);
+			sum += _print_s(va_arg(args, char *));
+			i = i + 2;
 		}
 
-		va_end(args);
-		return (sum);
+		_putchar(format[i]);
+		sum++;
 	}
+
+	va_end(args);
+
+	return (sum);
 }
