@@ -7,7 +7,7 @@
  */
 int _print_c(char c)
 {
-	if (c != '\0')
+	if (c)
 		_putchar(c);
 	return (1);
 }
