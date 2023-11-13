@@ -25,21 +25,18 @@ int _printf(const char *format, ...)
 			sum++;
 			i = i + 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 'c')
+		if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			sum += _print_c(va_arg(args, int));
 			i = i + 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 's')
+		if (format[i] == '%' && format[i + 1] == 's')
 		{
 			sum += _print_s(va_arg(args, char *));
 			i = i + 2;
 		}
-		else
-		{
-			_putchar(format[i]);
-			sum++;
-		}
+		_putchar(format[i]);
+		sum++;
 	}
 
 	va_end(args);
