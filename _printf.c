@@ -8,11 +8,13 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int i, sum = 0;
+	int i = 0, sum = 0;
 
 	va_start(args, format);
 
-	if (format == NULL)
+	if (!format)
+		return (-1);
+	if (format[i] == '%' && format[i + 1] == ' ' && !format[i + 2])
 		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
