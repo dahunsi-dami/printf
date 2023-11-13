@@ -14,28 +14,28 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-	if (format[i] == '%' && format[i + 1] == ' ' && !format[i + 2])
-		return (-1);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '%' && format[i - 1] == '%')
-		{
-			_putchar('%');
-		}
 		if (format[i] == '%')
-			continue;
-		if (format[i] == 'c' && format[i - 1] == '%')
 		{
-			sum += _print_c(va_arg(args, int));
-			continue;
+			i += 1;
+			switch(format[i])
+			{
+				case 'c':
+					sum += _print_c(va_arg(args, int));
+					break;
+				case '%':
+					sum += _print_c('%');
+					break;
+				case 's':
+					sum += _print_s(va_arg(args, char *));
+					break;
+			}
 		}
-		if (format[i] == 's' && format[i - 1] == '%')
+		else
 		{
-			sum += _print_s(va_arg(args, char *));
-			continue;
+			sum += _putchar(format[i]);
 		}
-		_putchar(format[i]);
-		sum++;
 	}
 
 	va_end(args);
