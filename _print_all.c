@@ -26,6 +26,8 @@ int _print_all(char forspec, va_list args)
 				case '%':
 					sum += _putchar('%');
 					return (sum);
+				case ' ':
+					exit(1);
 			}
 		}
 		i++;
