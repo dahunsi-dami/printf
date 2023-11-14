@@ -9,8 +9,16 @@
  */
 int _print_d(int number)
 {
-	int numCopy = number, denom = 1, result;
+	int numCopy, denom = 1, result;
 	int count = 0;
+
+	if (number < 0)
+	{
+		_putchar('-');
+		number = -number;
+	}
+
+	numCopy = number;
 
 	while (numCopy > 10)
 	{
