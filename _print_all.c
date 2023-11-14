@@ -27,12 +27,13 @@ int _print_all(char forspec, va_list args)
 					sum += _putchar('%');
 					return (sum);
 				case ' ':
-					exit(1);
+				case '\0':
+					exit(-1);
 			}
 		}
 		i++;
 	}
-	exit(1);
+	exit(-1);
 
 	return (sum);
 }
