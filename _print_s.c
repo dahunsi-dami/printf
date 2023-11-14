@@ -10,7 +10,7 @@ int _print_s(char *str)
 	int i;
 
 	if (str == NULL)
-		exit(-1);
+		i = write(1, "(null)", 6);
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 	return (i);
