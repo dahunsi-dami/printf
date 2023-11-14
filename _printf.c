@@ -19,18 +19,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i += 1;
-			switch (format[i])
-			{
-				case 'c':
-					sum += _print_c(va_arg(args, int));
-					break;
-				case '%':
-					sum += _print_c('%');
-					break;
-				case 's':
-					sum += _print_s(va_arg(args, char *));
-					break;
-			}
+			sum += _print_all(format[i], args);
 		}
 		else
 		{

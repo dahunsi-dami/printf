@@ -3,10 +3,11 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int _print_c(char c);
 int _print_s(char *str);
+int _print_all(char forspec, va_list args);
 
 #endif
