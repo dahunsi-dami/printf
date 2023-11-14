@@ -20,7 +20,7 @@ int _print_d(int number)
 
 	numCopy = number;
 
-	while (numCopy > 10)
+	while (numCopy >= 10)
 	{
 		denom *= 10;
 		numCopy /= 10;
