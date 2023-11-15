@@ -26,23 +26,24 @@ int _print_all(char forspec, va_list args)
 				case '%':
 					sum += _putchar('%');
 					return (sum);
-				case ' ':
-				case '\0':
-					exit(-1);
 				case 'd':
 				case 'i':
 					sum += _print_d(va_arg(args, int));
 					return (sum);
 			}
 		}
+		else if (forspec == ' ' || forspec == '\0')
+		{
+			exit(-1);
+		}
 		else
 		{
 			sum += _putchar('%');
-			sum += _putchar(_putchar(va_arg(args, int)));
+			sum += _putchar(forspec);
+			return (sum);
 		}
 		i++;
 	}
-	exit(-1);
 
 	return (sum);
 }
