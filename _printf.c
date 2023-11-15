@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			sum += _putchar('%');
 			sum += _putchar(format[i]);
 		}
 	}
