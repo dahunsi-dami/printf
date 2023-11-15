@@ -23,4 +23,5 @@ Here is a table summarizing the key functions used in this project:
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
 | `_putchar`			| Function to print a single character to the standard output   |
-| ...					| ...															|
+| `_printf`			| Function that produces output according to a specified format			|
+| `va_start`   | Function that tells va_arg after which argument to start collecting variable arguments from   |
