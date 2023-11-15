@@ -9,7 +9,7 @@
 int _print_all(char forspec, va_list args)
 {
 	int sum = 0, i = 0;
-	char *acceptedspecs = "dics%";
+	char *acceptedspecs = "bdics%";
 
 	while (acceptedspecs[i] != '\0')
 	{
@@ -29,6 +29,9 @@ int _print_all(char forspec, va_list args)
 				case 'd':
 				case 'i':
 					sum += _print_d(va_arg(args, int));
+					return (sum);
+				case 'b':
+					sum += _print_b(va_arg(args, int));
 					return (sum);
 			}
 		}
