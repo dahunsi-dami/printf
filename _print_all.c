@@ -33,17 +33,11 @@ int _print_all(char forspec, va_list args)
 			}
 		}
 		else if (forspec == ' ' || forspec == '\0')
-		{
 			exit(-1);
-		}
-		else
-		{
-			sum += _putchar('%');
-			sum += _putchar(forspec);
-			return (sum);
-		}
 		i++;
 	}
+
+	exit(-1);
 
 	return (sum);
 }
