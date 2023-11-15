@@ -9,6 +9,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int _print_s(char *str);
 int _print_all(char forspec, va_list args);
-int _print_d(int number);
+int _print_d(long int number);
 
 #endif
