@@ -7,9 +7,9 @@
  * Return: On success (length of string
  * otherwise (-1))
  */
-int _print_d(int number)
+int _print_d(long int number)
 {
-	int numCopy, denom = 1, result;
+	long int numCopy, denom = 1, result;
 	int count = 0;
 
 	if (number < 0)
