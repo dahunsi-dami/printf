@@ -35,11 +35,6 @@ int _print_all(char forspec, va_list args)
 					return (sum);
 			}
 		}
-		else
-		{	
-			sum += _putchar('%');
-			sum += _putchar(_putchar(va_arg(args, int)));
-		}
 		i++;
 	}
 	exit(-1);
