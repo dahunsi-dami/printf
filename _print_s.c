@@ -8,14 +8,16 @@
 int _print_s(char *str)
 {
 	int i;
-		
+
 	if (str == NULL)
 	{
-			i = write(1, "(null)", 6);
-			return (i);
+		i = write(1, "(null)", 6);
+		return (i);
 	}
-
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+	else
+	{
+		for (i = 0; str[i] != '\0'; i++)
+			_putchar(str[i]);
+	}
 	return (i);
 }
