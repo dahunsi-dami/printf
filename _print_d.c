@@ -16,6 +16,7 @@ int _print_d(int number)
 	{
 		_putchar('-');
 		number = -number;
+		count++;
 	}
 
 	numCopy = number;
