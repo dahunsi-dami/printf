@@ -6,7 +6,7 @@
  *
  * Return: On success (binary conversion)
  */
-int _print_b(int number)
+int _print_b(long int number)
 {
 	static int count = 0;
 
