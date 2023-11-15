@@ -22,6 +22,11 @@ Here is a table summarizing the key functions used in this project:
 
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
+| `write`   | Function that writes a specified character with a specified size in bytes to a specified output   |
 | `_putchar`			| Function to print a single character to the standard output   |
 | `_printf`			| Function that produces output according to a specified format			|
 | `va_start`   | Function that tells va_arg after which argument to start collecting variable arguments from   |
+| `va_end`   | Function that ends the process of taking in variable arguments   |
+| `_print_all`   | Function that determines which argument to take in based on the specifier it encounters   |
+| `_print_d`   | Function that prints an integer to the standard output   |
+| `_print_s`   | Function that prints a string minus null byte to the standard output   |
