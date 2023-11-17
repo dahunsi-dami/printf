@@ -10,5 +10,6 @@ int _printf(const char *format, ...);
 int _print_s(char *str);
 int _print_all(char forspec, va_list args);
 int _print_d(long int number);
+int _add_to_buffer(char *str, char *buffer);
 
 #endif
