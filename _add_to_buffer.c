@@ -17,11 +17,8 @@ int _add_to_buffer(char s, char *buffer)
 		i++;
 	}
 
-	for (j = 0; str[j] != '\0'; j++)
-	{
-		buffer[i] = str[j];
-		i++;
-	}
+	buffer[i] = s;
+	buffer[i + 1] = '\0';
 
 	return (i);
 }
