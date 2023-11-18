@@ -1,14 +1,5 @@
 #include "main.h"
-/**
- * _putchar - prints given character c to stdout of 1.
- * @c: character to be printed
- *
- * Return: returns 1 if successful and -1 if error's encountered
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
+
 /**
  * _add_to_buffer - adds a specified string to a buffer.
  * @str: the string to be added to the buffer.
@@ -37,6 +28,7 @@ int _add_to_buffer(char *str, char *buffer)
 	_putchar('\n');
 	return (i);
 }
+
 /**
  * _send_to_buffer  - function takes a string and adds it to buffer.
  * @s: the string to be added to the buffer.

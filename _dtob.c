@@ -15,6 +15,7 @@ int _pow(int base, int pow)
 
 	return (result);
 }
+
 /**
  * _binary - function that converts a decimal to binary.
  * @num: the number to be converted to base 2.
@@ -23,7 +24,7 @@ int _pow(int base, int pow)
  */
 int _binary(int num)
 {
-	int i = 0, j = 0, result, k;
+	int i = 0, j = 0, result;
 	char *str;
 
 	while (_pow(2, i) < num)
@@ -49,22 +50,6 @@ int _binary(int num)
 		i--;
 		j++;
 	}
-	/* for (k = 0; k < j; k++) */
-	/*	printf("%c", str[k]); */
 	_send_to_buffer(str);
-	printf("\n");
-	return (0);
-}
-/**
- * main - entry point of function.
- *
- * Return: always 0 (success).
- */
-int main(void)
-{
-	int n = 13;
-
-	_binary(n);
-
 	return (0);
 }
