@@ -8,12 +8,12 @@
  */
 int _print_b(long int number)
 {
-	static int count = 0;
+	int count = 0;
 
 	if ((number / 2) > 0)
 		_print_b(number / 2);
 	_putchar((number % 2) + '0');
 	count++;
 
-	return(count);
+	return (count);
 }
