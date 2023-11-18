@@ -27,6 +27,8 @@ int _binary(int num)
 	int i = 0, j = 0, result;
 	char *str;
 
+	char buffer[1024] = "";
+
 	while (_pow(2, i) < num)
 		i++;
 	i -= 1;
@@ -40,16 +42,15 @@ int _binary(int num)
 		result = _pow(2, i);
 		if (result <= num)
 		{
-			str[j] = '1';
+			_add_to_buffer('1', buffer);
 			num -= result;
 		}
 		else
 		{
-			str[j] = '0';
+			_add_to_buffer('0', buffer);
 		}
 		i--;
 		j++;
 	}
-	_send_to_buffer(str);
 	return (0);
 }
