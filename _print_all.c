@@ -9,7 +9,7 @@
 int _print_all(char forspec, va_list args)
 {
 	int sum = 0, i = 0;
-	char *acceptedspecs = "bdics%";
+	char *acceptedspecs = "dics%";
 
 	while (acceptedspecs[i] != '\0')
 	{
