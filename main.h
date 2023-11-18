@@ -13,7 +13,6 @@ int _print_d(long int number);
 int _print_b(long int number);
 int _pow(int base, int pow);
 int _binary(int num);
-int main(void);
 int _add_to_buffer(char *str, char *buffer);
 int _send_to_buffer(char *s);
 
