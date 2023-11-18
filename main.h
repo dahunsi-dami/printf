@@ -15,5 +15,6 @@ int _binary(int num);
 int main(void);
 int _add_to_buffer(char *str, char *buffer);
 int _send_to_buffer(char *s);
+int _print_b(long int);
 
 #endif
