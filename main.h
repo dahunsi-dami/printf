@@ -10,11 +10,11 @@ int _printf(const char *format, ...);
 int _print_s(char *str);
 int _print_all(char forspec, va_list args);
 int _print_d(long int number);
+int _print_b(long int number);
 int _pow(int base, int pow);
 int _binary(int num);
 int main(void);
 int _add_to_buffer(char *str, char *buffer);
 int _send_to_buffer(char *s);
-int _print_b(long int);
 
 #endif
