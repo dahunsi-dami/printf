@@ -22,7 +22,7 @@ int _pow(int base, int pow)
  *
  * Return: always 0 (success).
  */
-int _binary(int num)
+int _dtob(int num)
 {
 	int i = 0, j = 0, result;
 	char *str;
