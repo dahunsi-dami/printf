@@ -15,4 +15,6 @@ int _twoscomplement(long int b, char *buffer)
 		bit = (b >> i) & 1;
 		buffer[length] = bit + '0';
 	}
+
+	return (length);
 }
