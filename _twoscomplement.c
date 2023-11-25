@@ -1,36 +1,18 @@
 #include "main.h"
 /**
  * _twoscomplement - performs math op twos complement on bufer.
+ * @b: the number to be converted.
  * @buffer: the buffer containing binary form of number.
  *
  * Return: the length of the buffer.
  */
-int _twoscomplement(char *buffer)
+int _twoscomplement(long int b, char *buffer)
 {
-	int i = 0, j, k, len = 0;
+	long int i, bit, length = 0;
 
-	while (buffer[i])
-		i++;
-	i -= 1;
-	while (i >= 0)
+	for (i = sizeof(long int) * 8 - 1; i >= 0; i--)
 	{
-		if (buffer[i] == '1')
-			break;
-		i--;
+		bit = (b >> i) & 1;
+		buffer[length] = bit + '0';
 	}
-
-	for (j = i - 1; j >= 0; j--, len++)
-	{
-		if (buffer[j] == '0')
-			buffer[j] = 1 + '0';
-		else if (buffer[j] == '1')
-			buffer[j] = 0 + '0';
-	}
-	for (k = 0; buffer[k]; k++)
-		len++;
-	/*	if (buffer[k] == '1') */
-	/*		break; */
-	/* for (; buffer[k]; k++) */
-	/*	len++; */
-	return (len);
 }
