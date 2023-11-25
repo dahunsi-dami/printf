@@ -6,11 +6,11 @@
  *
  * Return: the length of the buffer.
  */
-int _twoscomplement(long int b, char *buffer)
+int _twoscomplement(int b, char *buffer)
 {
-	long int i, bit, length = 0;
+	int i, bit, length = 0;
 
-	for (i = sizeof(long int) * 8 - 1; i >= 0; i--)
+	for (i = sizeof(int) * 8 - 1; i >= 0; i--)
 	{
 		bit = (b >> i) & 1;
 		buffer[length] = bit + '0';

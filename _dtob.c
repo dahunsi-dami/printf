@@ -6,33 +6,37 @@
  *
  * Return: always 0 (success).
  */
-int _dtob(long int num)
+int _dtob(int num)
 {
-	long int i;
-	int bufflen = 0;
+	int i;
+	int bufflen = 0, on_bit = 0, bit;
 	char buffer[1024] = "";
 
 	if (num == 0)
 	{
-			_putchar('0');
-			return (1);
+		_putchar('0');
+		return (1);
 	}
 
 	if (num < 0)
 	{
-			bufflen = _twoscomplement(num, buffer);
-			return (bufflen);
+		bufflen = _twoscomplement(num, buffer);
 	}
 	else if (num > 0)
 	{
-			for (i = sizeof(long int) * 8 - 1; i >= 0; i--)
+		for (i = sizeof(int) * 8 - 1; i >= 0; i--)
+		{
+			bit =  (num >> i) & 1;
+			if (on_bit || bit)
 			{
-					buffer[bufflen] = (num >> i) & 1;
-					bufflen++;
+				on_bit = 1;
+				buffer[bufflen] = bit + '0';
+				bufflen++;
 			}
+		}
 	}
 
 	for (i = 0; buffer[i]; i++)
-			_putchar(buffer[i]);
+		_putchar(buffer[i]);
 	return (bufflen);
 }

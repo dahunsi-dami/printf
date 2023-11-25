@@ -10,8 +10,8 @@ int _printf(const char *format, ...);
 int _print_s(char *str);
 int _print_all(char forspec, va_list args);
 int _print_d(long int number);
-int _dtob(long int num);
+int _dtob(int num);
 int _add_to_buffer(char s, char *buffer);
-int _twoscomplement(long int b, char *buffer);
+int _twoscomplement(int b, char *buffer);
 
 #endif
