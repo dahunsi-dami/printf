@@ -39,8 +39,6 @@ int _print_all(char forspec, va_list args)
 			exit(-1);
 		i++;
 	}
-
-	/*exit(-1);*/
 	sum += _putchar('%');
 	sum += _putchar(forspec);
 
