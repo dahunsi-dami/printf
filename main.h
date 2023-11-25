@@ -14,5 +14,6 @@ int _print_b(long int number);
 int _pow(int base, int pow);
 int _binary(int num);
 int _add_to_buffer(char s, char *buffer);
+void _twoscomplement(char *buffer);
 
 #endif
