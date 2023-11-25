@@ -26,10 +26,15 @@ int _dtob(long int num)
 {
 	long int i = 0, result;
 	int bufflen = 0;
-
 	char buffer[1024] = "";
 
-	if (num >= 0)
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
+	if (num > 0)
 	{
 		while (_pow(2, i) <= num)
 			i++;
