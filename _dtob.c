@@ -17,40 +17,40 @@ int _pow(int base, int pow)
 }
 
 /**
- * _binary - function that converts a decimal to binary.
+ * _dtob - function that converts a decimal to binary.
  * @num: the number to be converted to base 2.
  *
  * Return: always 0 (success).
  */
 int _dtob(int num)
 {
-	int i = 0, j = 0, result;
-	char *str;
+	int i = 0, bufflen = 0, result, numCopy = num;
 
 	char buffer[1024] = "";
 
-	while (_pow(2, i) < num)
+	if (num < 0)
+		num = -(num);
+	while (_pow(2, i) <= num)
 		i++;
 	i -= 1;
-
-	str = malloc(sizeof(char) * (i + 1));
-	if (str == NULL)
-		return (1);
 
 	while (i >= 0)
 	{
 		result = _pow(2, i);
 		if (result <= num)
 		{
-			_add_to_buffer('1', buffer);
+			bufflen = _add_to_buffer('1', buffer);
 			num -= result;
 		}
 		else
 		{
-			_add_to_buffer('0', buffer);
+			bufflen = _add_to_buffer('0', buffer);
 		}
 		i--;
-		j++;
 	}
-	return (0);
+	if (numCopy < 0)
+		bufflen = _twoscomplement(buffer);
+	for (i = 0; buffer[i]; i++)
+		_putchar(buffer[i]);
+	return (bufflen);
 }
