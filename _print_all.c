@@ -31,7 +31,7 @@ int _print_all(char forspec, va_list args)
 					sum += _print_d(va_arg(args, int));
 					return (sum);
 				case 'b':
-					sum += _print_b(va_arg(args, int));
+					sum += _dtob(va_arg(args, int));
 					return (sum);
 			}
 		}
