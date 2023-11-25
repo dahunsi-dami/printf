@@ -23,7 +23,7 @@ int _dtob(long int num)
 			bufflen = _twoscomplement(num, buffer);
 			return (bufflen);
 	}
-	else
+	else if (num > 0)
 	{
 			for (i = sizeof(long int) * 8 - 1; i >= 0; i--)
 			{
