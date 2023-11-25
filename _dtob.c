@@ -1,20 +1,4 @@
 #include "main.h"
-/**
- * _pow - function calculates a base raised to a power.
- * @base: the base number.
- * @pow: the exponent to which base should be raised.
- *
- * Return: integer which is exponent of the base to pow.
- */
-int _pow(int base, int pow)
-{
-	int i, result = 1;
-
-	for (i = 0; i < pow; i++)
-		result *= base;
-
-	return (result);
-}
 
 /**
  * _dtob - function that converts a decimal to binary.
@@ -24,41 +8,31 @@ int _pow(int base, int pow)
  */
 int _dtob(long int num)
 {
-	long int i = 0, result;
+	long int i;
 	int bufflen = 0;
 	char buffer[1024] = "";
 
 	if (num == 0)
 	{
-		_putchar('0');
-		return (1);
+			_putchar('0');
+			return (1);
 	}
 
-	if (num > 0)
+	if (num < 0)
 	{
-		while (_pow(2, i) <= num)
-			i++;
-		i -= 1;
-
-		while (i >= 0)
-		{
-			result = _pow(2, i);
-			if (result <= num)
-			{
-				bufflen = _add_to_buffer('1', buffer);
-				num -= result;
-			}
-			else
-			{
-				bufflen = _add_to_buffer('0', buffer);
-			}
-			i--;
-		}
-	} else
-	{
-		bufflen = _twoscomplement(num, buffer);
+			bufflen = _twoscomplement(num, buffer);
+			return (bufflen);
 	}
+	else
+	{
+			for (i = sizeof(long int) * 8 - 1; i >= 0; i--)
+			{
+					buffer[bufflen] = (num >> i) & 1;
+					bufflen++;
+			}
+	}
+
 	for (i = 0; buffer[i]; i++)
-		_putchar(buffer[i]);
+			_putchar(buffer[i]);
 	return (bufflen);
 }
