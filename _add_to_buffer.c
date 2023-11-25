@@ -9,7 +9,7 @@
  */
 int _add_to_buffer(char s, char *buffer)
 {
-	int i = 0, j = 0;
+	int i = 0;
 
 	while (*buffer != '\0')
 	{
