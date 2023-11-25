@@ -22,9 +22,10 @@ int _pow(int base, int pow)
  *
  * Return: always 0 (success).
  */
-int _dtob(int num)
+int _dtob(long int num)
 {
-	int i = 0, bufflen = 0, result, numCopy = num;
+	long int i = 0, result, numCopy = num;
+	int bufflen = 0;
 
 	char buffer[1024] = "";
 
@@ -49,7 +50,7 @@ int _dtob(int num)
 		i--;
 	}
 	if (numCopy < 0)
-		bufflen = _twoscomplement(buffer);
+		bufflen = _twoscomplement(numCopy);
 	for (i = 0; buffer[i]; i++)
 		_putchar(buffer[i]);
 	return (bufflen);
