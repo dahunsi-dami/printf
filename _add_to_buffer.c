@@ -11,14 +11,11 @@ int _add_to_buffer(char s, char *buffer)
 {
 	int i = 0;
 
-	while (*buffer != '\0')
-	{
-		buffer++;
+	while (buffer[i])
 		i++;
-	}
 
 	buffer[i] = s;
 	buffer[i + 1] = '\0';
 
-	return (i);
+	return (i + 1);
 }
