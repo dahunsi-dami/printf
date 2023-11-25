@@ -13,6 +13,6 @@ int _print_d(long int number);
 int _pow(int base, int pow);
 int _dtob(long int num);
 int _add_to_buffer(char s, char *buffer);
-int _twoscomplement(long int b);
+int _twoscomplement(long int b, char *buffer);
 
 #endif
