@@ -18,21 +18,14 @@ int _dtob(int num)
 		return (1);
 	}
 
-	if (num < 0)
+	for (i = sizeof(int) * 8 - 1; i >= 0; i--)
 	{
-		bufflen = _twoscomplement(num, buffer);
-	}
-	else if (num > 0)
-	{
-		for (i = sizeof(int) * 8 - 1; i >= 0; i--)
+		bit =  (num >> i) & 1;
+		if (on_bit || bit)
 		{
-			bit =  (num >> i) & 1;
-			if (on_bit || bit)
-			{
-				on_bit = 1;
-				buffer[bufflen] = bit + '0';
-				bufflen++;
-			}
+			on_bit = 1;
+			buffer[bufflen] = bit + '0';
+			bufflen++;
 		}
 	}
 
