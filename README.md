@@ -20,10 +20,13 @@ This project aims to enhance our understanding of C programming and explore the 
 
 ## Functions Overview
 
-Here is a table summarizing the key functions used in this project:
+Here is a table summarizing the key functions used in this project.
+
+Functions we built from scratch start with the underscore `_` character.
 
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
+| `_printf`			| Function that produces output according to a specified format			|
 | `write`   | Function that writes a specified character with a specified size in bytes to a specified output   |
 | `_putchar`			| Function to print a single character to the standard output   |
 | `_printf`			| Function that produces output according to a specified format			|
