@@ -29,10 +29,10 @@ Functions we built from scratch start with the underscore `_` character.
 | `_printf`			| Produces output according to a specified format, handles special cases with `_print_all`, prints characters using `_putchar`, and returns the total number of characters printed (excluding the null byte).			|
 | `_putchar`			| Writes a single character to the standard output, and returns `1` on success or `-1` if an error occurs.   |
 | `_print_all`   | Decides which argument to take in based on the specifier it encounters by calling appropriate helper functions (e.g., `_print_s` for strings, `_dtob` for binary), and returns the total number of characters printed or `%` if the specified is invalid, followed by the specifier itself.   |
-| `_print_d`   | Function that prints an integer to the standard output   |
-| `_print_s`   | Function that prints a string minus null byte to the standard output   |
-| `_add_to_buffer`   | Appends a specified character to a string buffer, updates its null terminator, and returns the new length of the string in the buffer   |
-| `_dtob`   | Converts a given decimal integer to its binary representation, prints it using `_putchar`, and returns the number of binary digits printed   |
-| `write`   | Function that writes a specified character with a specified size in bytes to a specified output   |
-| `va_start`   | Function that tells va_arg after which argument to start collecting variable arguments from   |
-| `va_end`   | Function that ends the process of taking in variable arguments   |
+| `_print_d`   | Prints an integer (including negative numbers) to the standard output, and returns the total number of characters printed.   |
+| `_print_s`   | Prints a string minus null byte, or `"(null)"` if the string is NULL, to the standard output, and returns the total number of characters printed.   |
+| `_add_to_buffer`   | Appends a specified character to a string buffer, updates its null terminator, and returns the new length of the string in the buffer.   |
+| `_dtob`   | Converts a given decimal integer to its binary representation, prints it using `_putchar`, and returns the number of binary digits printed.   |
+| `write`   | Writes a specified character with a specified size in bytes to a specified output.   |
+| `va_start`   | Tells va_arg after which argument to start collecting variable arguments from.   |
+| `va_end`   | Ends the process of taking in variable arguments.   |
