@@ -1,10 +1,10 @@
-# ALX printf project
+# C - printf project
 
 ## Project Overview
 
-This is a collaborative project to build a custom `_printf` function in C that simulates the builtin `printf` function!
+This is a collaborative project to build a custom `_printf` function in C that simulates the standard `printf` function!
 
-This project aims to enhance our understanding of C programming and explore the intricacies of building a a fundamental yet powerful function used for formatted output.
+This project was done in the ALX Software Engineering one-year program, and it aims to enhance our understanding of C programming and explore the intricacies of building a fundamental yet powerful function used for formatted output.
 
 ## Project Contributors
 
@@ -38,3 +38,17 @@ Here is a table summarizing the key functions used in this project.
 | `write`   | Writes a specified character with a specified size in bytes to a specified output.   |
 | `va_start`   | Tells va_arg after which argument to start collecting variable arguments from.   |
 | `va_end`   | Ends the process of taking in variable arguments.   |
+
+## Compilation
+
+All files were compiled on Ubuntu 20.04 LTS using gcc with these options:
+
+`$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c`
+
+## Requirements
+
+- All code uses the `Betty` style and is checked witih `betty-style.pl` and `betty-doc.pl`.
+- No global variables were allowed or used.
+- No more than 5 functions per file.
+- All function prototypes are included in the header file called `main.h`.
+- All header files are include guarded.
