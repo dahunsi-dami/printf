@@ -27,9 +27,8 @@ Functions we built from scratch start with the underscore `_` character.
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
 | `_printf`			| Produces output according to a specified format, handles special cases with `_print_all`, prints characters using `_putchar`, and returns the total number of characters printed (excluding the null byte).			|
-| `_putchar`			| Function to print a single character to the standard output   |
-| `_printf`			| Function that produces output according to a specified format			|
-| `_print_all`   | Function that determines which argument to take in based on the specifier it encounters   |
+| `_putchar`			| Writes a single character to the standard output, and returns `1` on success or `-1` if an error occurs.   |
+| `_print_all`   | Decides which argument to take in based on the specifier it encounters by calling appropriate helper functions (e.g., `_print_s` for strings, `_dtob` for binary), and returns the total number of characters printed or `%` if the specified is invalid, followed by the specifier itself.   |
 | `_print_d`   | Function that prints an integer to the standard output   |
 | `_print_s`   | Function that prints a string minus null byte to the standard output   |
 | `_add_to_buffer`   | Appends a specified character to a string buffer, updates its null terminator, and returns the new length of the string in the buffer   |
