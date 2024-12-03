@@ -1,10 +1,12 @@
 # C - printf project
 
+**`An ALX Software Engineering Program project.`**
+
 ## Project Overview
 
 This is a collaborative project to build a custom `_printf` function in C that simulates the standard `printf` function!
 
-This project was done during the ALX Software Engineering one-year program, and it aims to enhance our understanding of C programming and explore the intricacies of building a fundamental yet powerful function used for formatted output.
+This project aims to enhance our understanding of C programming and explore the intricacies of building a fundamental yet powerful function used for formatted output.
 
 ## Project Contributors
 
