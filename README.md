@@ -20,9 +20,11 @@ This project aims to enhance our understanding of C programming and explore the 
 
 ## Functions Overview
 
+We built several functions from scratch, each prefixed with an underscore `_`, to handle different aspects of the custom `_printf` functionality. The project leverages C's variadic functions and other advanced features, making it a rewarding learning experience.
+
 Here is a table summarizing the key functions used in this project.
 
-Functions we built from scratch start with the underscore `_` character.
+**Functions we built from scratch start with the underscore `_` character.**
 
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
