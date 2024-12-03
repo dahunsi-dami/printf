@@ -24,7 +24,7 @@ We built several functions from scratch, each prefixed with an underscore `_`, t
 
 Here is a table summarizing the key functions used in this project.
 
-**Functions we built from scratch start with the underscore `_` character.**
+*Functions we built from scratch start with the underscore `_` character.*
 
 | Function Name 		| Description 													|
 | ----------------------|---------------------------------------------------------------|
