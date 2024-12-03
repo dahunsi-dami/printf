@@ -1,5 +1,5 @@
 # C - printf project
-**`An ALX Software Engineering Program project.`**<br><br>
+**`An ALX Africa Software Engineering Program project.`**<br><br>
 
 ## Project Overview
 
