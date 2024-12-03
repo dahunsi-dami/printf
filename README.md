@@ -2,7 +2,9 @@
 
 ## Project Overview
 
-This is a collaborative project to build a custom `_printf` function in C that simulates the builtin `printf` function! This project aims to enhance our understanding of C programming and explore the intricacies of building a a fundamental yet powerful function used for formatted output.
+This is a collaborative project to build a custom `_printf` function in C that simulates the builtin `printf` function!
+
+This project aims to enhance our understanding of C programming and explore the intricacies of building a a fundamental yet powerful function used for formatted output.
 
 ## Project Contributors
 
